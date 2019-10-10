@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
- <title></title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title></title>
  <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
 
@@ -30,38 +33,42 @@
 <body>
 
 <header >
- 
-<div class="card w-50 m-auto text-center ">
-  <div class="card-header bg-danger text-white">Serás o par perfeito do Willy?</div>
-  <div class="card-body">
+  <div class="container">
     <div class="row">
-      <div class="col-md-5">
-        <form>
-          <div class="form-group">
-            <input type="text" name="" class="form-control text-center" placeholder="O teu nome" id="name" >
+      <div class="col-md-6 offset-md-3">
+        <div class="card m-auto text-center ">
+        <div class="card-header bg-danger text-white">Serás o par perfeito do Willy?</div>
+        <div class="card-body">
+          <div class="row">
+            <div class="col-md-5">
+              <form>
+                <div class="form-group">
+                  <input type="text" name="" class="form-control text-center" placeholder="O teu nome" id="name" >
+                </div>
+            </div>
+          <div class="col-md-2">
+            <span> + </span>
           </div>
+          <div class="col-md-5">    
+            <div class="form-group">
+            <input type="text" name="" class="form-control text-center" id="lname" value="Willy" readonly="readonly">
+            </div>
+          </form> <br>
+        </div>
+        </div>
+          <div class="w-70 m-auto">
+          <button  class="btn btn-success w-50" id="result-btn" onclick="checkloveper()"> Resultado </button>
+          </div>
+          <br>
+          <div>
+          <input type="text" name="" placeholder="Percentagem" class="form-control text-center w-50 m-auto" id="lovevalue">
+          </div>
+        </div> 
+        <div class="card-footer ">Partilha o teu resultado no Instagram e identifica a nossa página @pancadas_do_infinito</div>
+        </div>
       </div>
-    <div class="col-md-2">
-      <span> + </span>
     </div>
-    <div class="col-md-5">    
-      <div class="form-group">
-      <input type="text" name="" class="form-control text-center" id="lname" value="Willy" readonly="readonly">
-      </div>
-    </form> <br>
   </div>
-  </div>
-    <div class="w-70 m-auto">
-     <button  class="btn btn-success w-50" id="result-btn" onclick="checkloveper()"> Resultado </button>
-    </div>
-    <br>
-    <div>
-     <input type="text" name="" placeholder="Percentagem" class="form-control text-center w-25 m-auto" id="lovevalue">
-    </div>
-  </div> 
-  <div class="card-footer ">Partilha o teu resultado no Instagram e identifica a nossa página @pancadas_do_infinito</div>
-</div>
-
 </header>
 
 <script>
@@ -89,13 +96,10 @@
   var lovdata = Math.floor(Math.random() * 70) + 70;
   lovdata = Math.floor(lovdata);
   document.getElementById('lovevalue').value = lovdata + "%"; 
-  }
   document.getElementById("result-btn").disabled = true;
+  }
  }
-
  
-</script>
-
 </script>
 </body>
 
